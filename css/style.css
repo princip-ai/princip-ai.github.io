@@ -2449,6 +2449,28 @@ form .small .status > *:nth-child(2),
   -webkit-animation-delay: 0.063648;
   animation-delay: 0.063648;
 }
+.content{
+  padding: 20px 0px;
+}
+.content span {
+  margin-left: 10px;
+}
+.content-group {
+  display: flex;
+  align-items: center; 
+  max-width: 500px;
+  white-space: pre-line;
+  line-height: 1.8; 
+}
+.about {
+  display: block;
+}
+.contact, .projects {
+  display: none;
+}
+.hidden {
+  display: none;
+}
 @-moz-keyframes lineNum1 {
   0% {
     -ms-filter: none;

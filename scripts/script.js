@@ -3,6 +3,18 @@ $(document).ready(function () {
   input.keyup(function () {
     inputTest(this);
   });
+  document.querySelectorAll('.link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      var targetId = this.id;
+      document.querySelectorAll('.content').forEach(function(content) {
+        if (content.classList.contains(targetId)) {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+    });
+  });
 });
 
 function inputTest(that) {
@@ -389,7 +401,7 @@ var render = function (a) {
 	renderer.render(scene, camera);
 };
 
-var imgData = './princip-text-p-logo.png';
+var imgData = './assets/princip-text-p-logo.png';
 
 var image = document.createElement("img");
 image.src = imgData;
